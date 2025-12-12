@@ -83,6 +83,13 @@ nav a {
 .service-item.health svg { stroke: #e63946; }
 .service-item.entertainment svg { stroke: #f4a261; }
 
+footer {
+    text-align: center; /* Center the footer text */
+    padding: 20px;
+    background: #f4f4f4;
+    margin-top: 40px;
+}
+
 @keyframes float {
     0% { transform: translateY(0); }
     50% { transform: translateY(-8px); }

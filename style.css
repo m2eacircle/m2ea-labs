@@ -54,6 +54,8 @@ nav a {
     border: 1px solid #ddd;
     border-radius: 10px;
     background: #fff;
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Keep text color consistent */
 }
 
 .service-item {

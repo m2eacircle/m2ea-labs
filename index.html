@@ -1,55 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>m2ea Labs</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>m2ea Labs</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        header {
+            background: #1a73e8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .hero {
+            background: #e8f0fe;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fff;
+        }
+        .service-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .service-item:nth-child(2) { animation-delay: 0.2s; }
+        .service-item:nth-child(3) { animation-delay: 0.4s; }
+        .service-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+        }
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        .service-item.education svg { stroke: #1a73e8; }
+        .service-item.health svg { stroke: #e63946; }
+        .service-item.entertainment svg { stroke: #f4a261; }
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-<header>
-<h1>m2ea Labs</h1>
-<p>Innovating Education • Health • Entertainment</p>
-</header>
+    <header>
+        <h1 style="font-family: 'Trebuchet MS', sans-serif; font-size: 3rem; letter-spacing: 2px;">
+            m2ea <span style="font-weight:300;">Labs</span>
+        </h1>
+        <p style="font-style: italic; opacity: 0.9;">Innovating Education • Health • Entertainment</p>
+    </header>
 
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="education.html">Education</a>
-<a href="health.html">Health</a>
-<a href="entertainment.html">Entertainment</a>
-<a href="#contact">Contact</a>
-</nav>
+    <section class="hero" id="home">
+        <h1>Welcome to m2ea Labs</h1>
+        <p>Your trusted partner for innovative solutions.</p>
+    </section>
 
+    <section class="section" id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <div class="card service-item education">
+                <div class="icon">
+                    <!-- Rounded Friendly Education Icon -->
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 12l9-6 9 6-9 6-9-6z" />
+                        <path d="M12 6v12" />
+                    </svg>
+                </div>
+                <h3>Education</h3>
+                <p>Innovative digital learning solutions to empower students and educators.</p>
+            </div>
+            <div class="card service-item health">
+                <div class="icon">
+                    <!-- Rounded Friendly Health Icon -->
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 21C12 21 4 14 4 8a4 4 0 0 1 8-4 4 4 0 0 1 8 4c0 6-8 13-8 13z" />
+                    </svg>
+                </div>
+                <h3>Health</h3>
+                <p>Smart wellness and healthcare technology for healthier lifestyles.</p>
+            </div>
+            <div class="card service-item entertainment">
+                <div class="icon">
+                    <!-- Rounded Friendly Entertainment Icon -->
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M9 12l2 2 4-4" />
+                    </svg>
+                </div>
+                <h3>Entertainment</h3>
+                <p>Creative and interactive entertainment experiences for all ages.</p>
+            </div>
+        </div>
+    </section>
 
-<section class="hero" id="home">
-<h1>Welcome to m2ea Labs</h1>
-<p>Your trusted partner for innovative solutions.</p>
-</section>
+    <section class="section" id="about">
+        <h2>About Us</h2>
+        <p>Write a short introduction about your company, mission, and values. This can be updated to reflect your brand identity and history.</p>
+    </section>
 
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@yourdomain.com<br />Phone: (123) 456-7890</p>
+    </section>
 
-<section class="section" id="services">
-<h2>Our Services</h2>
-<div class="services">
-<!-- Services cards with icons will be included here as in previous template -->
-</div>
-</section>
-
-
-<section class="section" id="about">
-<h2>About Us</h2>
-<p>Write a short introduction about your company, mission, and values.</p>
-</section>
-
-
-<section class="section" id="contact">
-<h2>Contact Us</h2>
-<p>Email: info@yourdomain.com<br />Phone: (123) 456-7890</p>
-</section>
-
-
-<footer>
-<p>© 2025 m2ea Labs. All rights reserved.</p>
-</footer>
+    <footer>
+        <p>© 2025 m2ea Labs. All rights reserved.</p>
+    </footer>
 </body>
 </html>

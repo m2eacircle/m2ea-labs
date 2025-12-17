@@ -1,21 +1,21 @@
-/* m2ea Labs - Professional Pastel Design */
+/* m2ea Labs - Comfortable & Relaxing Design */
 
 :root {
-    /* Professional Pastel Color Palette */
-    --primary: #a8c5dd;
-    --secondary: #c5b8d8;
-    --accent: #b8d4c8;
-    --dark: #2d3748;
-    --darker: #1a202c;
-    --light-bg: #f7fafc;
-    --text: #e2e8f0;
-    --text-dim: #a0aec0;
-    --glass: rgba(255, 255, 255, 0.04);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    /* Soft Color Palette */
+    --primary: #6b9bd1;
+    --secondary: #8b9dc3;
+    --accent: #7eb09b;
+    --dark: #2c3e50;
+    --darker: #1a252f;
+    --light-bg: #f8f9fa;
+    --text: #e8ecef;
+    --text-dim: #a8b2bc;
+    --glass: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
     
-    /* Soft Pastel Gradients */
-    --gradient-primary: linear-gradient(135deg, #a8c5dd, #c5b8d8);
-    --gradient-glow: linear-gradient(135deg, rgba(168, 197, 221, 0.12), rgba(197, 184, 216, 0.12));
+    /* Soft Gradients */
+    --gradient-primary: linear-gradient(135deg, #6b9bd1, #8b9dc3);
+    --gradient-glow: linear-gradient(135deg, rgba(107, 155, 209, 0.15), rgba(139, 157, 195, 0.15));
 }
 
 * {
@@ -64,14 +64,14 @@ body {
     position: absolute;
     border-radius: 50%;
     filter: blur(100px);
-    opacity: 0.12;
+    opacity: 0.15;
     animation: float 20s ease-in-out infinite;
 }
 
 .orb-1 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(168, 197, 221, 0.4), transparent);
+    background: radial-gradient(circle, rgba(107, 155, 209, 0.3), transparent);
     top: -200px;
     left: -100px;
     animation-delay: 0s;
@@ -80,7 +80,7 @@ body {
 .orb-2 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(197, 184, 216, 0.4), transparent);
+    background: radial-gradient(circle, rgba(139, 157, 195, 0.3), transparent);
     bottom: -150px;
     right: -100px;
     animation-delay: 7s;
@@ -89,7 +89,7 @@ body {
 .orb-3 {
     width: 350px;
     height: 350px;
-    background: radial-gradient(circle, rgba(184, 212, 200, 0.4), transparent);
+    background: radial-gradient(circle, rgba(126, 176, 155, 0.3), transparent);
     top: 50%;
     left: 50%;
     animation-delay: 14s;
@@ -193,8 +193,8 @@ body {
 
 .contact-btn:hover {
     background: var(--primary);
-    color: var(--darker);
-    box-shadow: 0 0 20px rgba(168, 197, 221, 0.4);
+    color: white;
+    box-shadow: 0 0 20px rgba(107, 155, 209, 0.4);
 }
 
 /* Hero Section */
@@ -233,8 +233,8 @@ body {
 }
 
 @keyframes glow {
-    0%, 100% { box-shadow: 0 0 15px rgba(168, 197, 221, 0.25); }
-    50% { box-shadow: 0 0 25px rgba(168, 197, 221, 0.4); }
+    0%, 100% { box-shadow: 0 0 15px rgba(107, 155, 209, 0.2); }
+    50% { box-shadow: 0 0 25px rgba(107, 155, 209, 0.35); }
 }
 
 .hero-title {
@@ -287,7 +287,7 @@ body {
 
 .btn-primary {
     background: var(--gradient-primary);
-    color: var(--darker);
+    color: var(--dark);
     border: none;
 }
 
@@ -299,7 +299,7 @@ body {
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.3);
     transform: translate(-50%, -50%);
     transition: width 0.6s, height 0.6s;
 }
@@ -311,7 +311,7 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(168, 197, 221, 0.35);
+    box-shadow: 0 15px 30px rgba(107, 155, 209, 0.3);
 }
 
 .btn-secondary {
@@ -325,7 +325,7 @@ body {
     border-color: var(--primary);
     background: var(--glass);
     transform: translateY(-2px);
-    box-shadow: 0 15px 30px rgba(168, 197, 221, 0.2);
+    box-shadow: 0 15px 30px rgba(107, 155, 209, 0.15);
 }
 
 .scroll-indicator {
@@ -426,15 +426,15 @@ body {
 }
 
 .service-card[data-service="education"] .card-glow {
-    background: radial-gradient(circle at center, rgba(168, 197, 221, 0.18), transparent 70%);
+    background: radial-gradient(circle at center, rgba(107, 155, 209, 0.15), transparent 70%);
 }
 
 .service-card[data-service="health"] .card-glow {
-    background: radial-gradient(circle at center, rgba(197, 184, 216, 0.18), transparent 70%);
+    background: radial-gradient(circle at center, rgba(139, 157, 195, 0.15), transparent 70%);
 }
 
 .service-card[data-service="entertainment"] .card-glow {
-    background: radial-gradient(circle at center, rgba(184, 212, 200, 0.18), transparent 70%);
+    background: radial-gradient(circle at center, rgba(126, 176, 155, 0.15), transparent 70%);
 }
 
 .service-card:hover .card-glow {
@@ -463,15 +463,15 @@ body {
 }
 
 .service-card[data-service="education"] .service-icon svg {
-    stroke: #a8c5dd;
+    stroke: #6b9bd1;
 }
 
 .service-card[data-service="health"] .service-icon svg {
-    stroke: #c5b8d8;
+    stroke: #8b9dc3;
 }
 
 .service-card[data-service="entertainment"] .service-icon svg {
-    stroke: #b8d4c8;
+    stroke: #7eb09b;
 }
 
 .service-card:hover .service-icon {
@@ -550,7 +550,7 @@ body {
 .stat-card:hover {
     transform: translateY(-5px);
     border-color: var(--primary);
-    box-shadow: 0 15px 30px rgba(168, 197, 221, 0.2);
+    box-shadow: 0 15px 30px rgba(107, 155, 209, 0.15);
 }
 
 .stat-number {
@@ -597,7 +597,7 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(168, 197, 221, 0.1), transparent 50%);
+    background: radial-gradient(circle, rgba(107, 155, 209, 0.08), transparent 50%);
     animation: rotate 20s linear infinite;
 }
 
@@ -625,7 +625,7 @@ body {
     gap: 1rem;
     padding: 1.2rem 3rem;
     background: var(--gradient-primary);
-    color: var(--darker);
+    color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 700;
@@ -636,7 +636,7 @@ body {
 
 .email-link:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 35px rgba(168, 197, 221, 0.35);
+    box-shadow: 0 15px 35px rgba(107, 155, 209, 0.3);
 }
 
 /* Footer */
@@ -987,7 +987,7 @@ body {
 /* Selection */
 ::selection {
     background: var(--primary);
-    color: var(--darker);
+    color: white;
 }
 
 /* Prevent image dragging and right-click */

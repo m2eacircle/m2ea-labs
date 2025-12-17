@@ -137,10 +137,27 @@ body {
 }
 
 .logo-m2ea {
+    display: flex;
+    gap: 0;
+}
+
+.logo-m2ea .letter-m {
+    color: #00d4ff;
+}
+
+.logo-m2ea .letter-2 {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.logo-m2ea .letter-e {
+    color: #ff3d71;
+}
+
+.logo-m2ea .letter-a {
+    color: #00ff88;
 }
 
 .logo-labs {
@@ -662,6 +679,35 @@ body {
     font-weight: 900;
     display: flex;
     gap: 0.3rem;
+}
+
+.footer-logo .logo-m2ea {
+    display: flex;
+    gap: 0;
+}
+
+.footer-logo .letter-m {
+    color: #00d4ff;
+}
+
+.footer-logo .letter-2 {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-logo .letter-e {
+    color: #ff3d71;
+}
+
+.footer-logo .letter-a {
+    color: #00ff88;
+}
+
+.footer-logo .logo-labs {
+    color: var(--text);
+    font-weight: 400;
 }
 
 .footer-links {

@@ -35,6 +35,27 @@ body {
     line-height: 1.6;
     font-weight: 300;
     overflow-x: hidden;
+    /* Content Protection */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+/* Disable image dragging and selection */
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+}
+
+/* Allow pointer events for interactive elements */
+a, button, input, textarea, select {
+    pointer-events: auto;
 }
 
 ::selection {

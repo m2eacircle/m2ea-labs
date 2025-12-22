@@ -8,7 +8,126 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollAnimations();
     initSmoothScroll();
     initMobileMenu();
+    initContentProtection();
 });
+
+/* ==========================================
+   Content Protection
+   ========================================== */
+function initContentProtection() {
+    // Disable right-click context menu
+    document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable text selection
+    document.addEventListener('selectstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable copy
+    document.addEventListener('copy', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable cut
+    document.addEventListener('cut', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable paste
+    document.addEventListener('paste', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable drag and drop
+    document.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    document.addEventListener('drop', function(e) {
+        e.preventDefault();
+        return false;
+    });
+
+    // Disable image dragging
+    document.querySelectorAll('img').forEach(function(img) {
+        img.setAttribute('draggable', 'false');
+    });
+
+    // Disable keyboard shortcuts (Ctrl+C, Ctrl+U, Ctrl+S, F12, etc.)
+    document.addEventListener('keydown', function(e) {
+        // Ctrl key combinations
+        if (e.ctrlKey) {
+            // Ctrl+C (copy), Ctrl+X (cut), Ctrl+V (paste)
+            if (e.key === 'c' || e.key === 'C' || 
+                e.key === 'x' || e.key === 'X' || 
+                e.key === 'v' || e.key === 'V') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+U (view source)
+            if (e.key === 'u' || e.key === 'U') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+S (save page)
+            if (e.key === 's' || e.key === 'S') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+A (select all)
+            if (e.key === 'a' || e.key === 'A') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+P (print)
+            if (e.key === 'p' || e.key === 'P') {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+I (developer tools)
+            if (e.shiftKey && (e.key === 'i' || e.key === 'I')) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+J (console)
+            if (e.shiftKey && (e.key === 'j' || e.key === 'J')) {
+                e.preventDefault();
+                return false;
+            }
+            // Ctrl+Shift+C (inspect element)
+            if (e.shiftKey && (e.key === 'c' || e.key === 'C')) {
+                e.preventDefault();
+                return false;
+            }
+        }
+
+        // F12 (developer tools)
+        if (e.key === 'F12') {
+            e.preventDefault();
+            return false;
+        }
+
+        // PrintScreen
+        if (e.key === 'PrintScreen') {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Additional CSS-based protection
+    document.body.style.userSelect = 'none';
+    document.body.style.webkitUserSelect = 'none';
+    document.body.style.msUserSelect = 'none';
+    document.body.style.mozUserSelect = 'none';
+}
 
 /* ==========================================
    Navbar Scroll Effect

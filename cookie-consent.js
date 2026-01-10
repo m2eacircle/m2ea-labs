@@ -23,7 +23,7 @@
             <div class="cookie-consent-content">
                 <div class="cookie-consent-text">
                     <h3>We value your privacy</h3>
-                    <p>We use cookies to enhance your browsing experience, serve personalized ads, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences or learn more in our <a href="/privacy.html">Privacy Policy</a>.</p>
+                    <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences or learn more in our <a href="/privacy.html">Privacy Policy</a>.</p>
                 </div>
                 <div class="cookie-consent-buttons">
                     <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept All</button>
@@ -330,19 +330,6 @@
                     </p>
                 </div>
 
-                <div class="cookie-category">
-                    <h4>
-                        <span>Advertising Cookies</span>
-                        <label class="cookie-toggle">
-                            <input type="checkbox" id="advertising-toggle">
-                            <span class="cookie-toggle-slider"></span>
-                        </label>
-                    </h4>
-                    <p style="font-size: 0.9rem; color: var(--color-text-muted, #6b6b6b); margin: 0.5rem 0 0 0;">
-                        Used to deliver relevant advertisements through Google AdSense based on your browsing activity.
-                    </p>
-                </div>
-
                 <div class="cookie-settings-actions">
                     <button class="cookie-btn cookie-btn-reject" onclick="this.closest('#cookie-settings-modal').remove()">Cancel</button>
                     <button class="cookie-btn cookie-btn-accept" id="save-settings">Save Preferences</button>
@@ -355,19 +342,16 @@
         // Set current preferences
         document.getElementById('analytics-toggle').checked = 
             localStorage.getItem('analyticsConsent') === 'true';
-        document.getElementById('advertising-toggle').checked = 
-            localStorage.getItem('advertisingConsent') === 'true';
 
         // Save settings
         document.getElementById('save-settings').addEventListener('click', function() {
             const analyticsConsent = document.getElementById('analytics-toggle').checked;
-            const advertisingConsent = document.getElementById('advertising-toggle').checked;
 
             localStorage.setItem('cookieConsent', 'customized');
             localStorage.setItem('analyticsConsent', analyticsConsent.toString());
-            localStorage.setItem('advertisingConsent', advertisingConsent.toString());
+            localStorage.setItem('advertisingConsent', 'false');
 
-            if (analyticsConsent || advertisingConsent) {
+            if (analyticsConsent) {
                 initializeThirdPartyServices();
             }
 
@@ -400,15 +384,7 @@
     }
 
     function initializeThirdPartyServices() {
-        const advertisingConsent = localStorage.getItem('advertisingConsent') === 'true';
         const analyticsConsent = localStorage.getItem('analyticsConsent') === 'true';
-
-        // AdSense is already loaded via the script tag in <head>
-        // This function can be extended to initialize other services
-        
-        if (advertisingConsent) {
-            console.log('Advertising consent granted - AdSense active');
-        }
 
         if (analyticsConsent) {
             console.log('Analytics consent granted');

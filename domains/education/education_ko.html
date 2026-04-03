@@ -14,11 +14,14 @@
         <a href="../../index.html" class="logo">m2ea <span>Labs</span></a>
         <ul class="nav-links">
             <li><a href="education_ko.html" class="active">교육</a></li>
+            <li><a href="../health/health_ko.html">건강</a></li>
             <li><a href="../entertainment/entertainment_ko.html">엔터테인먼트</a></li>
             <li><a href="../../index_ko.html#contact">연락처</a></li>
         </ul>
         <div class="lang-switcher">
             <a href="education_en.html" class="lang-btn">EN</a>
+            <span class="lang-divider">|</span>
+            <a href="education_fr.html" class="lang-btn">FR</a>
             <span class="lang-divider">|</span>
             <a href="education_ko.html" class="lang-btn active">KO</a>
         </div>
@@ -43,7 +46,7 @@
         </div>
     </section>
 
-    <section class="products-section">
+    <section class="products">
         <div class="section-header">
             <span class="section-number">01</span>
             <h2 class="section-title">제품 소개</h2>
@@ -51,59 +54,67 @@
 
         <div class="products-grid">
             <div class="product-card education fade-in">
-                <div class="product-icon">
-                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="8" y="4" width="32" height="40" rx="2"/>
-                        <path d="M14 12h20"/>
-                        <path d="M14 20h20"/>
-                        <path d="M14 28h14"/>
-                        <path d="M14 36h10"/>
-                        <circle cx="36" cy="36" r="6" fill="currentColor" stroke="none"/>
-                        <path d="M33 36l2 2 4-4" stroke="#3d5a80" stroke-width="2"/>
-                    </svg>
-                </div>
-                <h3>치과위생사 시험 문제 은행</h3>
-                <p>치과위생학 학생과 자격증 응시자를 위한 수천 개의 연습 문제를 갖춘 종합 시험 준비 도구입니다.</p>
-                <span class="product-type">웹 애플리케이션</span>
+                <svg class="product-card-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="1" width="11" height="15" rx="1"/>
+                    <path d="M6 5h5M6 8h5M6 11h3"/>
+                    <circle cx="15" cy="14" r="3"/>
+                    <path d="M13.8 14l.9.9 1.5-1.5" stroke-width="1.2"/>
+                </svg>
+                <h3>시험 문제은행 애플리케이션</h3>
+                <p>다양한 과목과 자격증 시험을 다루는 종합 문제은행입니다. 우리의 지능형 테스트 시스템은 귀하의 학습 속도에 맞춰 조정되고 개선이 필요한 영역을 제공합니다.</p>
+                <ul class="product-features">
+                    <li>수천 개의 연습 문제</li>
+                    <li>적응형 학습 알고리즘</li>
+                    <li>진행 추적 및 분석</li>
+                    <li>상세한 답변 설명</li>
+                </ul>
             </div>
 
             <div class="product-card education fade-in">
-                <div class="product-icon">
-                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M6 10c0-1 1-2 2-2h13v28H8c-1 0-2 1-2 2z"/>
-                        <path d="M42 10c0-1-1-2-2-2H27v28h13c1 0 2 1 2 2z"/>
-                        <path d="M24 8v28"/>
-                        <path d="M30 16h6M30 22h6M12 16h6M12 22h6"/>
-                        <rect x="16" y="32" width="16" height="11" rx="3" fill="currentColor" stroke="none" opacity="0.85"/>
-                        <path d="M24 35v2M22 37h4" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <h3>데일리 잉글리시</h3>
-                <p>실제 콘텐츠에서 가져온 한국어 번역이 포함된 실생활 영어 표현 — 매일 조금씩 배워보세요.</p>
-                <span class="product-type">웹 애플리케이션</span>
+                <svg class="product-card-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="10" cy="8" r="4"/>
+                    <path d="M7 13l-2 6 5-2 5 2-2-6"/>
+                    <path d="M8.5 8l1 1 2-2" stroke-width="1.2"/>
+                </svg>
+                <h3>자격증 준비 도구</h3>
+                <p>다양한 산업의 전문 자격증을 위한 특화된 준비 자료입니다. 시험 목표에 맞춘 엄선된 컨텐츠로 더 스마트하게 공부하세요.</p>
+                <ul class="product-features">
+                    <li>산업별 컨텐츠</li>
+                    <li>모의 시험 시뮬레이션</li>
+                    <li>학습 일정 계획</li>
+                    <li>성과 벤치마킹</li>
+                </ul>
             </div>
 
-            <div class="product-card education coming-soon fade-in">
-                <div class="product-icon">
-                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <path d="M24 4l4 12h12l-10 8 4 12-10-8-10 8 4-12-10-8h12z"/>
-                    </svg>
-                </div>
-                <h3>자격증 준비</h3>
-                <p>전문 자격증을 위한 특화된 준비 자료를 제공합니다.</p>
-                <span class="product-type">출시 예정</span>
+            <div class="product-card education fade-in">
+                <svg class="product-card-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 6l8-4 8 4-8 4-8-4z"/>
+                    <path d="M5 7.5v4.5s2 2 5 2 5-2 5-2V7.5"/>
+                    <path d="M18 6v5"/>
+                </svg>
+                <h3>학습 동반자</h3>
+                <p>플래시카드, 간격 반복 및 그룹 학습 세션을 위한 협업 기능을 통해 학습을 강화하는 인터랙티브 학습 보조 도구입니다.</p>
+                <ul class="product-features">
+                    <li>스마트 플래시카드 시스템</li>
+                    <li>간격 반복 스케줄링</li>
+                    <li>협업 학습실</li>
+                    <li>기기 간 동기화</li>
+                </ul>
             </div>
 
-            <div class="product-card education coming-soon fade-in">
-                <div class="product-icon">
-                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-                        <rect x="8" y="8" width="32" height="32" rx="4"/>
-                        <path d="M16 20h16M16 28h16M24 16v16"/>
-                    </svg>
-                </div>
-                <h3>더 많은 제품 출시 예정</h3>
-                <p>귀하의 학습 여정을 지원하기 위한 새로운 교육 도구를 지속적으로 개발하고 있습니다.</p>
-                <span class="product-type">개발 중</span>
+            <div class="product-card education fade-in">
+                <svg class="product-card-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="16" height="16" rx="1"/>
+                    <path d="M5 14l3-4 3 2 4-6"/>
+                </svg>
+                <h3>학습 분석 대시보드</h3>
+                <p>귀하의 강점, 약점 및 최적의 학습 패턴을 이해하는 데 도움이 되는 상세한 분석으로 학습 여정에 대한 통찰력을 얻으세요.</p>
+                <ul class="product-features">
+                    <li>시각적 진행 보고서</li>
+                    <li>학습 패턴 분석</li>
+                    <li>목표 설정 및 추적</li>
+                    <li>개인화된 추천</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -187,6 +198,7 @@
                 <li><a href="../../privacy_ko.html">개인정보 보호정책</a></li>
                 <li><a href="../../terms_ko.html">이용약관</a></li>
                 <li><a href="education_ko.html">교육</a></li>
+                <li><a href="../health/health_ko.html">건강</a></li>
                 <li><a href="../entertainment/entertainment_ko.html">엔터테인먼트</a></li>
             </ul>
         </div>

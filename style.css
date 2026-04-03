@@ -543,6 +543,18 @@ nav.scrolled {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
+.product-card-icon {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 1.25rem;
+    opacity: 0.75;
+    display: block;
+}
+
+.product-card.education .product-card-icon { color: var(--color-education); }
+.product-card.health .product-card-icon { color: var(--color-health); }
+.product-card.entertainment .product-card-icon { color: var(--color-entertainment); }
+
 .product-card h3 {
     font-family: var(--font-serif);
     font-size: 1.5rem;
